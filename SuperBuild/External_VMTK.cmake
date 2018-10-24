@@ -86,7 +86,7 @@ ExternalProject_SetIfNotDefined(
     DEPENDS
       ${${proj}_DEPENDS}
     )
-  set(${proj}_DIR ${CMAKE_BINARY_DIR}/${proj}-build)
+  set(${proj}_DIR ${EP_BINARY_DIR})
 
 else()
   ExternalProject_Add_Empty(${proj} DEPENDS ${${proj}_DEPENDS})
